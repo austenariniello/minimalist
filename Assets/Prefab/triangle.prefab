@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 344169684890819650}
   - component: {fileID: 344169684890819653}
   - component: {fileID: 344169684890819652}
+  - component: {fileID: 5218645771344137876}
   m_Layer: 0
   m_Name: triangle
   m_TagString: Untagged
@@ -90,9 +91,22 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 344169684890819655}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5c04208edaa2dbb4cbe53b7cdeae1002, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
+--- !u!114 &5218645771344137876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 344169684890819655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d27f936fda2254bc79c8548b7d0b7838, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lengthOnScreen: 5

@@ -13,25 +13,28 @@ public class MoveLeft : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(Move());
+
+        //StartCoroutine(Move());
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (!isMoving) {
+        Move();
+        if (transform.position.x < endPos.x) {
             Destroy(gameObject);
         }
     }
 
-    IEnumerator Move() {
-        float timeElapsed = 0.0f;
-        while (timeElapsed < 1.0f) {
-            transform.position = Vector3.Lerp(startPos, endPos, timeElapsed);
-            timeElapsed += Time.deltaTime * (1.0f/lengthOnScreen);
-            yield return null;
-        }
-        isMoving = false;
+    void Move() {
+        //float timeElapsed = 0.0f;
+        transform.Translate(-0.04f, 0, 0);
+        //while (timeElapsed < 1.0f) {
+        //    transform.position = Vector3.Lerp(startPos, endPos, timeElapsed);
+        //    timeElapsed += Time.deltaTime * (1.0f/lengthOnScreen);
+        //    yield return null;
+        //}
+        //isMoving = false;
     }
 
 

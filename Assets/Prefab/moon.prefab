@@ -10,11 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 7388493692160187273}
   - component: {fileID: 7388493692160187278}
-  - component: {fileID: 7388493692160187279}
   - component: {fileID: 8046161621384597350}
   - component: {fileID: 840568821531770400}
   - component: {fileID: 7589659724909092692}
-  - component: {fileID: 544721738520561907}
   m_Layer: 0
   m_Name: moon
   m_TagString: Note
@@ -87,19 +85,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7388493692160187279
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7388493692160187276}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c04208edaa2dbb4cbe53b7cdeae1002, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 10
 --- !u!114 &8046161621384597350
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -198,15 +183,3 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 6
---- !u!114 &544721738520561907
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7388493692160187276}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59eaa1a065f7f48a3a97212807da9ed9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

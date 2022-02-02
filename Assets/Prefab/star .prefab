@@ -10,11 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 3564519449659247456}
   - component: {fileID: 3564519449659247459}
-  - component: {fileID: 3564519449659247458}
   - component: {fileID: 5062880911138238893}
   - component: {fileID: 6944433674516626472}
   - component: {fileID: 7684761088838266499}
-  - component: {fileID: 3866996008165583322}
   m_Layer: 0
   m_Name: 'star '
   m_TagString: Note
@@ -87,19 +85,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &3564519449659247458
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3564519449659247461}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c04208edaa2dbb4cbe53b7cdeae1002, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 10
 --- !u!114 &5062880911138238893
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -227,15 +212,3 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 6
---- !u!114 &3866996008165583322
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3564519449659247461}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59eaa1a065f7f48a3a97212807da9ed9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

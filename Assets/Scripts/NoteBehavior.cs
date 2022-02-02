@@ -4,23 +4,27 @@ using UnityEngine;
 
 public class NoteBehavior : MonoBehaviour
 {
-
-    private bool onTop;
+    
+    //private Vector3 showPosition = new Vector3(xPosShow, 3.0f, 0.0f);
+    // private bool onTop;
     
     // Start is called before the first frame update
     void Start()
     {
-        onTop = false;
+        //onTop = false;
+        
     }
 
     // Update is called once per frame
     void Update()
     {
+        /*
         if(Input.anyKeyDown){
             ButtonPress();
         }
+        */
     }
-
+    /*
     private void OnTriggerEnter2D(Collider2D other) {
         if(other.gameObject.CompareTag("Circle")) {
             onTop = true;
@@ -35,9 +39,18 @@ public class NoteBehavior : MonoBehaviour
 
     public void ButtonPress(){
         if (onTop) {
-            Destroy(gameObject);
+            Debug.Log("here");
+            
+            
+            //Destroy(GetComponent<move>());
+            
+            
+            //Instantiate(gameObject, showPosition, Quaternion.identity);
+            //Destroy(gameObject);
         }
     }
+    */
+    
 
 
 }

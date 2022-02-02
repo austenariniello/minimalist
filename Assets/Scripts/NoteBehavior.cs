@@ -22,12 +22,14 @@ public class NoteBehavior : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other) {
         if(other.gameObject.CompareTag("Circle")) {
+            print("entered circle");
             onTop = true;
         }
     }
 
     private void OnTriggerExit2D(Collider2D other) {
         if(other.gameObject.CompareTag("Circle")) {
+            print("left circle");
             onTop = false;
         }
     }

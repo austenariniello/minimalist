@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class NoteBehavior : MonoBehaviour
 {
-    
+
     private bool onTop;
-    private bool died = false;
     
     // Start is called before the first frame update
     void Start()
@@ -17,19 +16,19 @@ public class NoteBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(Input.anyKeyDown){
+            ButtonPress();
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
         if(other.gameObject.CompareTag("Circle")) {
-            print("entered circle");
             onTop = true;
         }
     }
 
     private void OnTriggerExit2D(Collider2D other) {
         if(other.gameObject.CompareTag("Circle")) {
-            print("left circle");
             onTop = false;
         }
     }

@@ -6,6 +6,7 @@ public class collisionCheck : MonoBehaviour
 {
     private float xPosShow = -4.0f;
     private bool inCircle = false;
+   
     private GameObject target;
     private float ycontrol=0.0f;
 
@@ -26,6 +27,7 @@ public class collisionCheck : MonoBehaviour
         if (Input.anyKeyDown && inCircle)
         {
             xPosShow += 1.5f;
+            
             if(xPosShow<9.0f){
                 target.transform.position = new Vector3(xPosShow, 4.0f-ycontrol, 0.0f);
             }
@@ -56,11 +58,11 @@ public class collisionCheck : MonoBehaviour
             plusNum=plusNum+1.0f;
             Debug.Log("Plus found");
         }
-        /*
-        if(triangleNum>=2.0f&&squareNum>=1.0f&&plusNum>=1.0f){
+        
+        if(triangleNum>=2.0f && squareNum>=1.0f && plusNum>=1.0f){
            GameController.Instance.UpdateText();
         }
-        */
+        
         target = other.gameObject;
         Debug.Log("collision occur");
        

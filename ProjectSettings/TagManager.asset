@@ -6,6 +6,10 @@ TagManager:
   tags:
   - Note
   - Circle
+  - Triangle
+  - Undefined
+  - Square
+  - Plus
   layers:
   - Default
   - TransparentFX

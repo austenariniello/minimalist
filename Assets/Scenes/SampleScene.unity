@@ -232,7 +232,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   winText: {fileID: 40818867}
-  Instance: {fileID: 0}
 --- !u!4 &276920836
 Transform:
   m_ObjectHideFlags: 0
@@ -478,7 +477,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 7d3b5c3221f109f47988f751188fcc92, type: 2}
+  - {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -681,7 +680,8 @@ MonoBehaviour:
   - {fileID: 6767068123332384962, guid: a6681bab4418fe64b9a5ad017f63520c, type: 3}
   - {fileID: 3564519449659247461, guid: 7650748f421e9ea4a9185fe4130a0a22, type: 3}
   - {fileID: 344169684890819655, guid: 446bcd806a46c65439fae9762bfa40b5, type: 3}
-  spawnTimeLow: 0.5
+  - {fileID: 344169684890819655, guid: 446bcd806a46c65439fae9762bfa40b5, type: 3}
+  spawnTimeLow: 0.4
   spawnTimeHigh: 5
 --- !u!4 &816935494
 Transform:

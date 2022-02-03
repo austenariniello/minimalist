@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class collisionCheck : MonoBehaviour
 {
-    private float xPosShow = -4.0f;
+    
     private bool inCircle = false;
    
     private GameObject target;
-    private float ycontrol=0.0f;
+    
 
     private float triangleNum=0.0f;
     private float squareNum=0.0f;
@@ -26,42 +26,49 @@ public class collisionCheck : MonoBehaviour
         // to collection above
         if (Input.anyKeyDown && inCircle)
         {
-            xPosShow += 1.5f;
             
-            if(xPosShow<9.0f){
-                target.transform.position = new Vector3(xPosShow, 4.0f-ycontrol, 0.0f);
+
+            //counting captured items
+            if (target.tag == "Triangle")
+            {
+                triangleNum = triangleNum + 1.0f;
+                Debug.Log("triangle found");
+                GameController.Instance.updateCollection(target);
             }
-            else if(xPosShow>=9.0f){
-                xPosShow=-2.5f;
-                ycontrol=ycontrol+1.0f;
-                target.transform.position=new Vector3(xPosShow, 4.0f-ycontrol, 0.0f);
+            else if (target.tag == "Square")
+            {
+                squareNum = squareNum + 1.0f;
+                Debug.Log("Square found");
+                GameController.Instance.updateCollection(target);
+            }
+            else if (target.gameObject.tag == "Plus")
+            {
+                plusNum = plusNum + 1.0f;
+                Debug.Log("Plus found");
+                GameController.Instance.updateCollection(target);
+            }
+            else
+            {
+                Debug.Log("clear out");
+                triangleNum = 0;
+                squareNum = 0;
+                plusNum = 0;
+                GameController.Instance.cleanCollection();
+            }
+
+            if (triangleNum >= 2.0f && squareNum >= 1.0f && plusNum >= 1.0f)
+            {
+                GameController.Instance.UpdateText();
             }
             
-            target.transform.localScale = new Vector3(0.3f, 0.3f, 0.3f);
-            Destroy(target.GetComponent<MoveLeft>());
-            Debug.Log(xPosShow);
+           
         }
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
         inCircle = true;
-        if (other.gameObject.tag == "Triangle"){
-            triangleNum=triangleNum+1.0f;
-            Debug.Log("triangle found");
-        }
-        else if (other.gameObject.tag == "Square"){
-            squareNum=squareNum+1.0f;
-            Debug.Log("Square found");
-        }
-        else if (other.gameObject.tag == "Plus"){
-            plusNum=plusNum+1.0f;
-            Debug.Log("Plus found");
-        }
         
-        if(triangleNum>=2.0f && squareNum>=1.0f && plusNum>=1.0f){
-           GameController.Instance.UpdateText();
-        }
         
         target = other.gameObject;
         Debug.Log("collision occur");
